@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_textToCompare",
+						"type": "string"
+					}
+				],
+				"name": "compareCurrentString",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "message",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_newMessage",
+						"type": "string"
+					}
+				],
+				"name": "setMessage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/HelloWorld.sol": "HelloWorld"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/HelloWorld.sol": {
+			"keccak256": "0xc796ac8b28ef67da7469695cbb440b7a24f0a4b78e498510cdbb6f43223b30fa",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f014f23e65e112c1827a37fee92bdb5f888c4f745f48b611db5ee755a70b4984",
+				"dweb:/ipfs/QmeDBFbJcYkmyrKcxKk3R1rC1gZCRod44szxM6mU3N3Qbt"
+			]
+		}
+	},
+	"version": 1
+}
