@@ -1,0 +1,113 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "cancelTestament",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "_percentagens",
+						"type": "uint8[]"
+					}
+				],
+				"name": "createInheritance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMyTestament",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "testators",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "exist",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastProofOfLife",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/InheritanceContract.sol": "InheritanceContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/InheritanceContract.sol": {
+			"keccak256": "0x8ad4613f562402c5a5a87b1d8e04e56fe5dc1703756f83c54fa4fac8bb4f5849",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://100831179c4ae9a2958a6fd10f7d6939f824f0004e436e87317e93d89133b687",
+				"dweb:/ipfs/QmVtxStVpntJDnUyJmFghwew6R2AEY5vhPsqFuTwhXd4YS"
+			]
+		}
+	},
+	"version": 1
+}
