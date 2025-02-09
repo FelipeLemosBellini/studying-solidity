@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.28+commit.7893614a"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -49,8 +49,13 @@
 				"outputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "receptor",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "percentage",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -62,6 +67,11 @@
 						"internalType": "address",
 						"name": "onlyReceiver",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "percentage",
+						"type": "uint256"
 					}
 				],
 				"name": "deposit",
@@ -118,11 +128,11 @@
 	},
 	"sources": {
 		".deps/studying-solidity/DepositAndWithdrawal.sol": {
-			"keccak256": "0x6609c66720804615582fce05b64fc2fb22b1fc782d4b5dee6ec528bb621409d1",
+			"keccak256": "0xc26f4c0460a3de086c29a7f930b87cfab2ef7bbcd82a274784ef5ad6db5f7391",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fbc80524b43cc458cc2c0a378701eca4c83bd59564df56f341e80e2c096e7855",
-				"dweb:/ipfs/QmcqXLyPA2G4Zo4bFGDRmvJgs9LNShX9djZDjKkYNydCtz"
+				"bzz-raw://727d01da6aaa0e03db2de78d80bfa8f9397391ce42a5217b51b3426171490044",
+				"dweb:/ipfs/QmPFRLv1xLk7r5fJtYNpW35edvdGzUKbUWNePYCSrH4tLB"
 			]
 		}
 	},
