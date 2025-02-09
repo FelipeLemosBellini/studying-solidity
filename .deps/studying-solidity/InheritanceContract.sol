@@ -22,7 +22,7 @@ contract InheritanceContract {
     ) external {
         address own = msg.sender;
 
-        Inheritor[] memory _newInheritors = new Inheritor[](_addresses.length);
+        if (testators[own].exist) delete testators[own].inheritors;
 
         for (uint256 i = 0; i < _addresses.length; i++) {
             Inheritor memory _inheritor = Inheritor(
@@ -30,8 +30,7 @@ contract InheritanceContract {
                 _percentagens[i]
             );
 
-            _newInheritors[i] = _inheritor;
-            testators[own].inheritors = _newInheritors;
+            testators[own].inheritors.push(_inheritor);
         }
         testators[own].exist = true;
         testators[own].lastProofOfLife = block.timestamp;
@@ -71,6 +70,12 @@ contract InheritanceContract {
         address own = msg.sender;
 
         delete testators[own];
+    }
+
+    function updateProofOfLife() external {
+        address own = msg.sender;
+        require(testators[own].exist, "Testador nao existe");
+        testators[own].lastProofOfLife = block.timestamp;
     }
 }
 

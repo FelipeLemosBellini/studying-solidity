@@ -71,6 +71,13 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "updateProofOfLife",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -101,11 +108,11 @@
 	},
 	"sources": {
 		".deps/studying-solidity/InheritanceContract.sol": {
-			"keccak256": "0x8ad4613f562402c5a5a87b1d8e04e56fe5dc1703756f83c54fa4fac8bb4f5849",
+			"keccak256": "0xc3d1fe71941b6d3209ebaf8e195d021665de71fcb99ca08c8b9957f3d8ba51e3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://100831179c4ae9a2958a6fd10f7d6939f824f0004e436e87317e93d89133b687",
-				"dweb:/ipfs/QmVtxStVpntJDnUyJmFghwew6R2AEY5vhPsqFuTwhXd4YS"
+				"bzz-raw://8b3e8e8d90d6f4652af7778ade497d7d7ca4f6425acb418cf628c82e64c3dc8d",
+				"dweb:/ipfs/QmaPytHUHLXB1yphQhJxPHjx6mAVW2wdU4mrA6kD5wuxNT"
 			]
 		}
 	},
