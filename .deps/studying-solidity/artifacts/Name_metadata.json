@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/InheritanceContract.sol": "Name"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/InheritanceContract.sol": {
+			"keccak256": "0x981e2ae7db8dcb2d0b719a466d55381414ef1a68b44a5572c9d1cdaf4bcd98b3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7ca7046897356155c271f53e6f0f6e2ec8cfde97dfb0cddde24a62751b10cb0d",
+				"dweb:/ipfs/QmbUY18cVMpVMijt9nSi2p4P6yJMFJVk52E7xw66fWFvfh"
+			]
+		}
+	},
+	"version": 1
+}

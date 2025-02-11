@@ -6,20 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "cancelTestament",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "checkInheritance",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address[]",
@@ -66,54 +52,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "inheritorToTestator",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "testators",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "exist",
-						"type": "bool"
-					},
-					{
-						"internalType": "uint256",
-						"name": "lastProofOfLife",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "updateProofOfLife",
 				"outputs": [],
@@ -134,7 +72,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			".deps/studying-solidity/InheritanceContract.sol": "InheritanceContract"
+			".deps/studying-solidity/InheritanceContract.sol": "IInheritanceContract"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
