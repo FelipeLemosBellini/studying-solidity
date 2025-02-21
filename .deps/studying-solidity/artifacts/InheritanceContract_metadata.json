@@ -149,11 +149,11 @@
 	},
 	"sources": {
 		".deps/studying-solidity/InheritanceContract.sol": {
-			"keccak256": "0x310645d32e431b2baf43056be27e661e164463736c075c23744dbe6ba73928b7",
+			"keccak256": "0xf4440459a74be18471844c6f15d75269e52546083c6e1a3ee1f7089180cdbb78",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f5977b2965c2025f13b308802e90957b05c80942e918c19f6353d5c2309e784c",
-				"dweb:/ipfs/QmXaMCS44NXz14ECnDy6V1MGkiKRPwGGRkEKwfCZnVYNKY"
+				"bzz-raw://0b68e0f2853ee1506a7298c632aa3e08922abbed81fff0ebd1153c9d4d9e39ba",
+				"dweb:/ipfs/Qmaqc3fpn1XyrKaTJcXbZ4pyoJUYQASrDdsC8xybfdujwp"
 			]
 		},
 		"@openzeppelin/contracts/utils/Panic.sol": {

@@ -26,6 +26,8 @@ interface IInheritanceContract {
     function updateProofOfLife() external;
 
     function withdrawal() external;
+
+    function cancelTestament() external;
 }
 
 contract InheritanceContract is IInheritanceContract {

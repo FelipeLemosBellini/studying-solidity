@@ -49,6 +49,7 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
+			"cancelTestament()": "1aba6da6",
 			"createInheritance(address[],uint8[])": "759a8a98",
 			"getMyTestament()": "3a994a8b",
 			"updateProofOfLife()": "c80cc411",
@@ -56,6 +57,13 @@
 		}
 	},
 	"abi": [
+		{
+			"inputs": [],
+			"name": "cancelTestament",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
 		{
 			"inputs": [
 				{
