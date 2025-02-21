@@ -8,65 +8,49 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address[]",
-						"name": "_addresses",
-						"type": "address[]"
-					},
-					{
-						"internalType": "uint8[]",
-						"name": "_percentagens",
-						"type": "uint8[]"
-					}
-				],
-				"name": "createInheritance",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getMyTestament",
-				"outputs": [
-					{
-						"internalType": "address[]",
-						"name": "",
-						"type": "address[]"
-					},
-					{
-						"internalType": "uint64[]",
-						"name": "",
-						"type": "uint64[]"
-					},
-					{
-						"internalType": "uint128",
-						"name": "",
-						"type": "uint128"
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "length",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
+				"name": "StringsInsufficientHexLength",
+				"type": "error"
 			},
 			{
 				"inputs": [],
-				"name": "updateProofOfLife",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
+				"name": "StringsInvalidAddressFormat",
+				"type": "error"
 			},
 			{
 				"inputs": [],
-				"name": "withdrawal",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
+				"name": "StringsInvalidChar",
+				"type": "error"
 			}
 		],
 		"devdoc": {
+			"details": "String operations.",
+			"errors": {
+				"StringsInsufficientHexLength(uint256,uint256)": [
+					{
+						"details": "The `value` string doesn't fit in the specified `length`."
+					}
+				],
+				"StringsInvalidAddressFormat()": [
+					{
+						"details": "The string being parsed is not a properly formatted address."
+					}
+				],
+				"StringsInvalidChar()": [
+					{
+						"details": "The string being parsed contains characters that are not in scope of the given base."
+					}
+				]
+			},
 			"kind": "dev",
 			"methods": {},
 			"version": 1
@@ -79,7 +63,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			".deps/studying-solidity/InheritanceContract.sol": "IInheritanceContract"
+			".deps/npm/@openzeppelin/contracts/utils/Strings.sol": "Strings"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -93,15 +77,7 @@
 		"remappings": []
 	},
 	"sources": {
-		".deps/studying-solidity/InheritanceContract.sol": {
-			"keccak256": "0x310645d32e431b2baf43056be27e661e164463736c075c23744dbe6ba73928b7",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://f5977b2965c2025f13b308802e90957b05c80942e918c19f6353d5c2309e784c",
-				"dweb:/ipfs/QmXaMCS44NXz14ECnDy6V1MGkiKRPwGGRkEKwfCZnVYNKY"
-			]
-		},
-		"@openzeppelin/contracts/utils/Panic.sol": {
+		".deps/npm/@openzeppelin/contracts/utils/Panic.sol": {
 			"keccak256": "0xf7fe324703a64fc51702311dc51562d5cb1497734f074e4f483bfb6717572d7a",
 			"license": "MIT",
 			"urls": [
@@ -109,7 +85,7 @@
 				"dweb:/ipfs/QmVSaVJf9FXFhdYEYeCEfjMVHrxDh5qL4CGkxdMWpQCrqG"
 			]
 		},
-		"@openzeppelin/contracts/utils/Strings.sol": {
+		".deps/npm/@openzeppelin/contracts/utils/Strings.sol": {
 			"keccak256": "0x44f87e91783e88415bde66f1a63f6c7f0076f2d511548820407d5c95643ac56c",
 			"license": "MIT",
 			"urls": [
@@ -117,7 +93,7 @@
 				"dweb:/ipfs/QmZwPA47Yqgje1qtkdEFEja8ntTahMStYzKf5q3JRnaR7d"
 			]
 		},
-		"@openzeppelin/contracts/utils/math/Math.sol": {
+		".deps/npm/@openzeppelin/contracts/utils/math/Math.sol": {
 			"keccak256": "0xa00be322d7db5786750ce0ac7e2f5b633ac30a5ed5fa1ced1e74acfc19acecea",
 			"license": "MIT",
 			"urls": [
@@ -125,7 +101,7 @@
 				"dweb:/ipfs/QmZmy9dgxLTerBAQDuuHqbL6EpgRxddqgv5KmwpXYVbKz1"
 			]
 		},
-		"@openzeppelin/contracts/utils/math/SafeCast.sol": {
+		".deps/npm/@openzeppelin/contracts/utils/math/SafeCast.sol": {
 			"keccak256": "0x195533c86d0ef72bcc06456a4f66a9b941f38eb403739b00f21fd7c1abd1ae54",
 			"license": "MIT",
 			"urls": [
@@ -133,7 +109,7 @@
 				"dweb:/ipfs/QmPFKL2r9CBsMwmUqqdcFPfHZB2qcs9g1HDrPxzWSxomvy"
 			]
 		},
-		"@openzeppelin/contracts/utils/math/SignedMath.sol": {
+		".deps/npm/@openzeppelin/contracts/utils/math/SignedMath.sol": {
 			"keccak256": "0xb1970fac7b64e6c09611e6691791e848d5e3fe410fa5899e7df2e0afd77a99e3",
 			"license": "MIT",
 			"urls": [

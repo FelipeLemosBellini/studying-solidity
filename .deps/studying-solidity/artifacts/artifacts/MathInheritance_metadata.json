@@ -1,0 +1,44 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/artifacts/MathInheritance.sol": "MathInheritance"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/artifacts/MathInheritance.sol": {
+			"keccak256": "0x60da5e6f423afba5c929124f64e214f4a6cb310d8710849bc623ca5b15e3c8e2",
+			"urls": [
+				"bzz-raw://85f727874514b1bf78baee01cabf1954edfd7f0c4100cee59aa88daffc10931d",
+				"dweb:/ipfs/QmdpP3QtyxffpHaZVFsoCz4RpVJxrZ8zWevNbXffwsLutS"
+			]
+		}
+	},
+	"version": 1
+}

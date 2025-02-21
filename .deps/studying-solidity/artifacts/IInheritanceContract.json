@@ -51,7 +51,8 @@
 		"methodIdentifiers": {
 			"createInheritance(address[],uint8[])": "759a8a98",
 			"getMyTestament()": "3a994a8b",
-			"updateProofOfLife()": "c80cc411"
+			"updateProofOfLife()": "c80cc411",
+			"withdrawal()": "d4e93292"
 		}
 	},
 	"abi": [
@@ -83,14 +84,14 @@
 					"type": "address[]"
 				},
 				{
-					"internalType": "uint8[]",
+					"internalType": "uint64[]",
 					"name": "",
-					"type": "uint8[]"
+					"type": "uint64[]"
 				},
 				{
-					"internalType": "uint256",
+					"internalType": "uint128",
 					"name": "",
-					"type": "uint256"
+					"type": "uint128"
 				},
 				{
 					"internalType": "uint256",
@@ -104,6 +105,13 @@
 		{
 			"inputs": [],
 			"name": "updateProofOfLife",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "withdrawal",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"

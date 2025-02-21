@@ -13,13 +13,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "checkInheritance",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address[]",
@@ -47,14 +40,14 @@
 						"type": "address[]"
 					},
 					{
-						"internalType": "uint8[]",
+						"internalType": "uint64[]",
 						"name": "",
-						"type": "uint8[]"
+						"type": "uint64[]"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "uint128",
 						"name": "",
-						"type": "uint256"
+						"type": "uint128"
 					},
 					{
 						"internalType": "uint256",
@@ -100,13 +93,13 @@
 						"type": "bool"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "uint128",
 						"name": "lastProofOfLife",
-						"type": "uint256"
+						"type": "uint128"
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "totalAmount",
 						"type": "uint256"
 					}
 				],
@@ -116,6 +109,13 @@
 			{
 				"inputs": [],
 				"name": "updateProofOfLife",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawal",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -149,11 +149,51 @@
 	},
 	"sources": {
 		".deps/studying-solidity/InheritanceContract.sol": {
-			"keccak256": "0xc5f87113c9c203e25e04b2035a7c23717f6ba3ffa81714199c414de3d28dfb2e",
+			"keccak256": "0x310645d32e431b2baf43056be27e661e164463736c075c23744dbe6ba73928b7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://23f207645bf4f8f8caf7a2f8a9639390a602a0e95f90f1ae5331c7c85b844ac5",
-				"dweb:/ipfs/QmZuSrEf1V6HYxWgK2VgF7Rjqh6U27S2PSojEDh8XJN6sm"
+				"bzz-raw://f5977b2965c2025f13b308802e90957b05c80942e918c19f6353d5c2309e784c",
+				"dweb:/ipfs/QmXaMCS44NXz14ECnDy6V1MGkiKRPwGGRkEKwfCZnVYNKY"
+			]
+		},
+		"@openzeppelin/contracts/utils/Panic.sol": {
+			"keccak256": "0xf7fe324703a64fc51702311dc51562d5cb1497734f074e4f483bfb6717572d7a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c6a5ff4f9fd8649b7ee20800b7fa387d3465bd77cf20c2d1068cd5c98e1ed57a",
+				"dweb:/ipfs/QmVSaVJf9FXFhdYEYeCEfjMVHrxDh5qL4CGkxdMWpQCrqG"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0x44f87e91783e88415bde66f1a63f6c7f0076f2d511548820407d5c95643ac56c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://13a51bc2b23827744dcf5bad10c69e72528cf015a6fe48c93632cdb2c0eb1251",
+				"dweb:/ipfs/QmZwPA47Yqgje1qtkdEFEja8ntTahMStYzKf5q3JRnaR7d"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0xa00be322d7db5786750ce0ac7e2f5b633ac30a5ed5fa1ced1e74acfc19acecea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c84e822f87cbdc4082533b626667b6928715bb2b1e8e7eb96954cebb9e38c8d",
+				"dweb:/ipfs/QmZmy9dgxLTerBAQDuuHqbL6EpgRxddqgv5KmwpXYVbKz1"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SafeCast.sol": {
+			"keccak256": "0x195533c86d0ef72bcc06456a4f66a9b941f38eb403739b00f21fd7c1abd1ae54",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b1d578337048cad08c1c03041cca5978eff5428aa130c781b271ad9e5566e1f8",
+				"dweb:/ipfs/QmPFKL2r9CBsMwmUqqdcFPfHZB2qcs9g1HDrPxzWSxomvy"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SignedMath.sol": {
+			"keccak256": "0xb1970fac7b64e6c09611e6691791e848d5e3fe410fa5899e7df2e0afd77a99e3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db5fbb3dddd8b7047465b62575d96231ba8a2774d37fb4737fbf23340fabbb03",
+				"dweb:/ipfs/QmVUSvooZKEdEdap619tcJjTLcAuH6QBdZqAzWwnAXZAWJ"
 			]
 		}
 	},
