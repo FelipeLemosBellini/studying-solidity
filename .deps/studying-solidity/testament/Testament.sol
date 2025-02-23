@@ -114,6 +114,47 @@ contract Testament is StructsToTestament {
             "createInheritance(), quantidade de enderecos e porcentagens diferentes"
         );
 
+        clearOldInheritorsOfTestament(_ownTestament);
+
+        //Adicionar os novos herdeiros
+        //guarda cada herdeiro e porcentagem que vem do dApp
+        for (uint256 i = 0; i < inheritorsAddresses.length; i++) {
+            Inheritor memory _inheritor = Inheritor(
+                inheritorsAddresses[i],
+                percentages[i]
+            );
+
+            //adiciona o herdeiro e % no testamento
+            testament[_ownTestament].inheritors.push(_inheritor);
+
+            //adiciona o testador na lista de heranças do herdeiro
+            inheritorToTestators[inheritorsAddresses[i]].push(_ownTestament);
+        }
+    }
+
+    function cancelTestament() external {
+        address _ownTestament = msg.sender;
+
+        (bool success, ) = msg.sender.call{
+            value: testament[_ownTestament].balance
+        }("");
+        require(success, "cancelTestament(), Falha ao enviar ETH");
+
+        clearOldInheritorsOfTestament(_ownTestament);
+
+        delete testament[_ownTestament];
+    }
+
+    function updateProofOfLife() public {
+        address own = msg.sender;
+        require(
+            testament[own].exist,
+            "Voce nao possui nenhum testamento criado"
+        );
+        testament[own].lastProofOfLife = uint128(block.timestamp);
+    }
+
+    function clearOldInheritorsOfTestament(address _ownTestament) internal {
         //Apagar herdeiros anteriores
         //herdeiros anteriores
         Inheritor[] memory oldInheritors = testament[_ownTestament].inheritors;
@@ -139,38 +180,5 @@ contract Testament is StructsToTestament {
                 }
             }
         }
-
-        //Adicionar os novos herdeiros
-        //guarda cada herdeiro e porcentagem que vem do dApp
-        for (uint256 i = 0; i < inheritorsAddresses.length; i++) {
-            Inheritor memory _inheritor = Inheritor(
-                inheritorsAddresses[i],
-                percentages[i]
-            );
-
-            //adiciona o herdeiro e % no testamento
-            testament[_ownTestament].inheritors.push(_inheritor);
-
-            //adiciona o testador na lista de heranças do herdeiro
-            inheritorToTestators[inheritorsAddresses[i]].push(_ownTestament);
-        }
-    }
-
-    function cancelTestament() external {
-        address own = msg.sender;
-
-        (bool success, ) = msg.sender.call{value: testament[own].balance}("");
-        require(success, "cancelTestament(), Falha ao enviar ETH");
-
-        delete testament[own];
-    }
-
-    function updateProofOfLife() public {
-        address own = msg.sender;
-        require(
-            testament[own].exist,
-            "Voce nao possui nenhum testamento criado"
-        );
-        testament[own].lastProofOfLife = uint128(block.timestamp);
     }
 }
