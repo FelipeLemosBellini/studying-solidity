@@ -60,10 +60,7 @@ contract Testament is StructsToTestament {
             uint256
         )
     {
-        //se nao tiver testador buscar a heran
-        address _own = testator != address(0) ? msg.sender : testator;
-
-        Testament memory _testator = testament[_own];
+        Testament memory _testator = testament[testator];
 
         require(_testator.exist, "Testador nao encontrado");
 
@@ -81,9 +78,6 @@ contract Testament is StructsToTestament {
             _inheritorAddresses[i] = (_currentInheritor.inheritorAddress);
             _percentages[i] = (_currentInheritor.percentage);
         }
-
-        //reseta o endereço que fez o [getMyTestament]
-        _own = address(0);
 
         return (
             _inheritorAddresses,
