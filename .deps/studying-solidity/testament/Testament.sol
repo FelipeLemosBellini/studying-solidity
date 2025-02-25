@@ -112,6 +112,9 @@ contract Testament is StructsToTestament {
 
         //Adicionar os novos herdeiros
         //guarda cada herdeiro e porcentagem que vem do dApp
+
+        delete testament[_ownTestament].inheritors;
+
         for (uint256 i = 0; i < inheritorsAddresses.length; i++) {
             Inheritor memory _inheritor = Inheritor(
                 inheritorsAddresses[i],

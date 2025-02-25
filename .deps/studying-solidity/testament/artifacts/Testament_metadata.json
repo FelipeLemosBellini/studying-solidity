@@ -1,0 +1,204 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "cancelTestament",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "_percentagens",
+						"type": "uint8[]"
+					}
+				],
+				"name": "createInheritance",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "inheritorsAddresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint64[]",
+						"name": "percentages",
+						"type": "uint64[]"
+					}
+				],
+				"name": "editInheritorsInMyTestament",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "testator",
+						"type": "address"
+					}
+				],
+				"name": "getMyTestament",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint64[]",
+						"name": "",
+						"type": "uint64[]"
+					},
+					{
+						"internalType": "uint128",
+						"name": "",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMyTestators",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "inheritorToTestators",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "testament",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "exist",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint128",
+						"name": "lastProofOfLife",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "updateProofOfLife",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/testament/Testament.sol": "Testament"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/structs/StructsToTestament.sol": {
+			"keccak256": "0xedaafeef0445ad5179a718df279f99796eb046e980be212bb62e14ceaa2e736b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1f6dcb8cf1124402aed76900c1966d48b27c83ae696d9756be4e3d5e25207fc9",
+				"dweb:/ipfs/QmSMa3r2NFC2Sy34v2K5e5Afv4rw6UfAzv2VqoGfogLuDz"
+			]
+		},
+		".deps/studying-solidity/testament/Testament.sol": {
+			"keccak256": "0x7e80ac6900a600de1d08b6f8aef281521f8a1b703097afd4a0b9402e0195323d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e91b12e8a1724f36302687b89c6d1bcb7ec0c12dd356015967e1e9e3caf7bb15",
+				"dweb:/ipfs/QmeSTa97MoNQHiVEu1GBzP1gmghbAghDDBTwaxXCDQ22KK"
+			]
+		}
+	},
+	"version": 1
+}
