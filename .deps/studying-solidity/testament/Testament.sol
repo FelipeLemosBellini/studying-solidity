@@ -210,19 +210,25 @@ contract Testament is StructsToTestament {
 
     function removeAssetsInTestament(uint256 value) external {
         require(
+            testament[msg.sender].exist == true,
+            "voce nao possui testamento criado"
+        );
+        require(
             value <= testament[msg.sender].inheritanceValue,
             "voce nao tem isso tudo ai"
         );
 
-        testament[msg.sender].inheritanceValue -= value;
         (bool success, ) = payable(msg.sender).call{value: value}("");
 
         require(success, "nao tirou");
+        testament[msg.sender].inheritanceValue -= value;
     }
 
-    // ta zoada essa aqui
+     // ta zoada essa aqui
     function withdraw(address testator) external {
         address _inheritor = msg.sender;
+
+        //verificar se tem ETH pra sacar
         require(
             inheritorsCanWithdrawal(testator),
             "A retirada nao pode ser realizada"
@@ -264,5 +270,4 @@ contract Testament is StructsToTestament {
            // break;
         }
     }
-
 }
