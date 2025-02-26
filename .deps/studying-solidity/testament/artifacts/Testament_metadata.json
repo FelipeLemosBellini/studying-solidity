@@ -7,6 +7,13 @@
 		"abi": [
 			{
 				"inputs": [],
+				"name": "addAssetsInTestament",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "cancelTestament",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -20,9 +27,9 @@
 						"type": "address[]"
 					},
 					{
-						"internalType": "uint8[]",
+						"internalType": "uint16[]",
 						"name": "_percentagens",
-						"type": "uint8[]"
+						"type": "uint16[]"
 					}
 				],
 				"name": "createInheritance",
@@ -38,9 +45,9 @@
 						"type": "address[]"
 					},
 					{
-						"internalType": "uint64[]",
+						"internalType": "uint16[]",
 						"name": "percentages",
-						"type": "uint64[]"
+						"type": "uint16[]"
 					}
 				],
 				"name": "editInheritorsInMyTestament",
@@ -64,9 +71,14 @@
 						"type": "address[]"
 					},
 					{
-						"internalType": "uint64[]",
+						"internalType": "uint16[]",
 						"name": "",
-						"type": "uint64[]"
+						"type": "uint16[]"
+					},
+					{
+						"internalType": "bool[]",
+						"name": "",
+						"type": "bool[]"
 					},
 					{
 						"internalType": "uint128",
@@ -90,25 +102,6 @@
 						"internalType": "address[]",
 						"name": "",
 						"type": "address[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "testator",
-						"type": "address"
-					}
-				],
-				"name": "inheritorCanWithdrawal",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -142,6 +135,38 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "testator",
+						"type": "address"
+					}
+				],
+				"name": "inheritorsCanWithdrawal",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "removeAssetsInTestament",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -160,7 +185,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "balance",
+						"name": "inheritanceValue",
 						"type": "uint256"
 					}
 				],
@@ -170,6 +195,19 @@
 			{
 				"inputs": [],
 				"name": "updateProofOfLife",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "testator",
+						"type": "address"
+					}
+				],
+				"name": "withdraw",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -203,19 +241,19 @@
 	},
 	"sources": {
 		".deps/studying-solidity/structs/StructsToTestament.sol": {
-			"keccak256": "0xedaafeef0445ad5179a718df279f99796eb046e980be212bb62e14ceaa2e736b",
+			"keccak256": "0x838e36cfc371884ed322ce2252758a80db2b67f0e7a5df10e80ef46a1e011186",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1f6dcb8cf1124402aed76900c1966d48b27c83ae696d9756be4e3d5e25207fc9",
-				"dweb:/ipfs/QmSMa3r2NFC2Sy34v2K5e5Afv4rw6UfAzv2VqoGfogLuDz"
+				"bzz-raw://c77e4a9e64d3484b84a1da390dc571e8bffd994a08f42c1aeabfbd42a1caf8e0",
+				"dweb:/ipfs/QmZP1GhkYVsTvRCzMUPuUZGBdLhuj6P1ZAS4CKthknJH8D"
 			]
 		},
 		".deps/studying-solidity/testament/Testament.sol": {
-			"keccak256": "0x4300a6dc5df9abf40b60ac6548299b33c1eb9354afad97392b9c7f9e28d5d10a",
+			"keccak256": "0x3ad79b408d95b2e62d41bfe80f8424c8d116a15ed84bba1588ab3835d886675a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6be5f76b9acf2586684d26645b1996b05848071568216e0df8bb44ded305cd6e",
-				"dweb:/ipfs/Qmdu8zHRsX6HkKA1Js8iZHzsQjYWXL8PmpYz1kY3QGq85P"
+				"bzz-raw://82e7cd1b37a1468b594f36dd9c8a3270da4e3650ebf12dac25a80e4a9508a1eb",
+				"dweb:/ipfs/QmdCJ7L5tvzp2SSrTjgRMCvd13Ak3ZXMAxMRVks8qF1Ace"
 			]
 		}
 	},

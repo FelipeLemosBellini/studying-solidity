@@ -33,11 +33,11 @@
 	},
 	"sources": {
 		".deps/studying-solidity/structs/StructsToTestament.sol": {
-			"keccak256": "0xedaafeef0445ad5179a718df279f99796eb046e980be212bb62e14ceaa2e736b",
+			"keccak256": "0x838e36cfc371884ed322ce2252758a80db2b67f0e7a5df10e80ef46a1e011186",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1f6dcb8cf1124402aed76900c1966d48b27c83ae696d9756be4e3d5e25207fc9",
-				"dweb:/ipfs/QmSMa3r2NFC2Sy34v2K5e5Afv4rw6UfAzv2VqoGfogLuDz"
+				"bzz-raw://c77e4a9e64d3484b84a1da390dc571e8bffd994a08f42c1aeabfbd42a1caf8e0",
+				"dweb:/ipfs/QmZP1GhkYVsTvRCzMUPuUZGBdLhuj6P1ZAS4CKthknJH8D"
 			]
 		}
 	},

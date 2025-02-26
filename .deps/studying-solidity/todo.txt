@@ -1,6 +1,6 @@
-função para o herdeiro perguntar se pode sacar
-
 controle para cada herdeiro sacar a sua parte e não poder sacar mais
+
+remover e adicionar ETH no testamento
 
 lista de moedas ERC-20 no testamento
 
