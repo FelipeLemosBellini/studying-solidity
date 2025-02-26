@@ -1,5 +1,5 @@
 {
-	"id": "c7e1397fed92dba830d92e9e1cb03602",
+	"id": "9da4f2cef4bad908c9612e13f2aaceed",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.8.26",
 	"solcLongVersion": "0.8.26+commit.8a97fa7a",
@@ -7,7 +7,7 @@
 		"language": "Solidity",
 		"sources": {
 			".deps/studying-solidity/structs/StructsToTestament.sol": {
-				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract StructsToTestament {\n    struct Inheritor {\n        address inheritorAddress;\n        uint16 percentage;\n        bool canWithdraw;\n    }\n\n    struct Testament {\n        Inheritor[] inheritors;\n        bool exist;\n        uint128 lastProofOfLife;\n        uint256 inheritanceValue;\n        //salvar as moedas aqui\n    }\n}\n"
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract StructsToTestament {\n    struct Inheritor {\n        address inheritorAddress;\n        uint16 percentage;\n        bool canWithdraw;\n    }\n\n    struct Testament {\n        Inheritor[] inheritors;\n        bool exist;\n        uint128 lastProofOfLife;\n        uint256 inheritanceTotalValue;\n        //salvar as moedas aqui\n    }\n}\n"
 			}
 		},
 		"settings": {
@@ -49,23 +49,23 @@
 						"version": 1
 					},
 					"evm": {
-						"assembly": "    /* \".deps/studying-solidity/structs/StructsToTestament.sol\":57:385  contract StructsToTestament {... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \".deps/studying-solidity/structs/StructsToTestament.sol\":57:385  contract StructsToTestament {... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa26469706673582212207a1dd09fd9de5d5ef60def8e6103ca0d60b3e1a948b628a8503b97bf5296982564736f6c634300081a0033\n}\n",
+						"assembly": "    /* \".deps/studying-solidity/structs/StructsToTestament.sol\":57:390  contract StructsToTestament {... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \".deps/studying-solidity/structs/StructsToTestament.sol\":57:390  contract StructsToTestament {... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa26469706673582212206e112aaabe0e6a5d8e1f001c0901abf8b4c3fd035e9f22e211267a378999a88064736f6c634300081a0033\n}\n",
 						"bytecode": {
 							"functionDebugData": {},
 							"generatedSources": [],
 							"linkReferences": {},
-							"object": "6080604052348015600e575f80fd5b50603e80601a5f395ff3fe60806040525f80fdfea26469706673582212207a1dd09fd9de5d5ef60def8e6103ca0d60b3e1a948b628a8503b97bf5296982564736f6c634300081a0033",
-							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 DUP1 REVERT JUMPDEST POP PUSH1 0x3E DUP1 PUSH1 0x1A PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH27 0x1DD09FD9DE5D5EF60DEF8E6103CA0D60B3E1A948B628A8503B97BF MSTORE SWAP7 SWAP9 0x25 PUSH5 0x736F6C6343 STOP ADDMOD BYTE STOP CALLER ",
-							"sourceMap": "57:328:0:-:0;;;;;;;;;;;;;;;;;;;"
+							"object": "6080604052348015600e575f80fd5b50603e80601a5f395ff3fe60806040525f80fdfea26469706673582212206e112aaabe0e6a5d8e1f001c0901abf8b4c3fd035e9f22e211267a378999a88064736f6c634300081a0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 DUP1 REVERT JUMPDEST POP PUSH1 0x3E DUP1 PUSH1 0x1A PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH15 0x112AAABE0E6A5D8E1F001C0901ABF8 0xB4 0xC3 REVERT SUB MCOPY SWAP16 0x22 0xE2 GT 0x26 PUSH27 0x378999A88064736F6C634300081A00330000000000000000000000 ",
+							"sourceMap": "57:333:0:-:0;;;;;;;;;;;;;;;;;;;"
 						},
 						"deployedBytecode": {
 							"functionDebugData": {},
 							"generatedSources": [],
 							"immutableReferences": {},
 							"linkReferences": {},
-							"object": "60806040525f80fdfea26469706673582212207a1dd09fd9de5d5ef60def8e6103ca0d60b3e1a948b628a8503b97bf5296982564736f6c634300081a0033",
-							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH27 0x1DD09FD9DE5D5EF60DEF8E6103CA0D60B3E1A948B628A8503B97BF MSTORE SWAP7 SWAP9 0x25 PUSH5 0x736F6C6343 STOP ADDMOD BYTE STOP CALLER ",
-							"sourceMap": "57:328:0:-:0;;;;;"
+							"object": "60806040525f80fdfea26469706673582212206e112aaabe0e6a5d8e1f001c0901abf8b4c3fd035e9f22e211267a378999a88064736f6c634300081a0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH15 0x112AAABE0E6A5D8E1F001C0901ABF8 0xB4 0xC3 REVERT SUB MCOPY SWAP16 0x22 0xE2 GT 0x26 PUSH27 0x378999A88064736F6C634300081A00330000000000000000000000 ",
+							"sourceMap": "57:333:0:-:0;;;;;"
 						},
 						"gasEstimates": {
 							"creation": {
@@ -78,180 +78,180 @@
 							".code": [
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "PUSH",
 									"source": 0,
 									"value": "80"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "PUSH",
 									"source": 0,
 									"value": "40"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "MSTORE",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "CALLVALUE",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "DUP1",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "ISZERO",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "PUSH [tag]",
 									"source": 0,
 									"value": "1"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "JUMPI",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "PUSH",
 									"source": 0,
 									"value": "0"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "DUP1",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "REVERT",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "tag",
 									"source": 0,
 									"value": "1"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "JUMPDEST",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "POP",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "PUSH #[$]",
 									"source": 0,
 									"value": "0000000000000000000000000000000000000000000000000000000000000000"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "DUP1",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "PUSH [$]",
 									"source": 0,
 									"value": "0000000000000000000000000000000000000000000000000000000000000000"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "PUSH",
 									"source": 0,
 									"value": "0"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "CODECOPY",
 									"source": 0
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "PUSH",
 									"source": 0,
 									"value": "0"
 								},
 								{
 									"begin": 57,
-									"end": 385,
+									"end": 390,
 									"name": "RETURN",
 									"source": 0
 								}
 							],
 							".data": {
 								"0": {
-									".auxdata": "a26469706673582212207a1dd09fd9de5d5ef60def8e6103ca0d60b3e1a948b628a8503b97bf5296982564736f6c634300081a0033",
+									".auxdata": "a26469706673582212206e112aaabe0e6a5d8e1f001c0901abf8b4c3fd035e9f22e211267a378999a88064736f6c634300081a0033",
 									".code": [
 										{
 											"begin": 57,
-											"end": 385,
+											"end": 390,
 											"name": "PUSH",
 											"source": 0,
 											"value": "80"
 										},
 										{
 											"begin": 57,
-											"end": 385,
+											"end": 390,
 											"name": "PUSH",
 											"source": 0,
 											"value": "40"
 										},
 										{
 											"begin": 57,
-											"end": 385,
+											"end": 390,
 											"name": "MSTORE",
 											"source": 0
 										},
 										{
 											"begin": 57,
-											"end": 385,
+											"end": 390,
 											"name": "PUSH",
 											"source": 0,
 											"value": "0"
 										},
 										{
 											"begin": 57,
-											"end": 385,
+											"end": 390,
 											"name": "DUP1",
 											"source": 0
 										},
 										{
 											"begin": 57,
-											"end": 385,
+											"end": 390,
 											"name": "REVERT",
 											"source": 0
 										}
@@ -265,7 +265,7 @@
 						},
 						"methodIdentifiers": {}
 					},
-					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\".deps/studying-solidity/structs/StructsToTestament.sol\":\"StructsToTestament\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\".deps/studying-solidity/structs/StructsToTestament.sol\":{\"keccak256\":\"0x838e36cfc371884ed322ce2252758a80db2b67f0e7a5df10e80ef46a1e011186\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c77e4a9e64d3484b84a1da390dc571e8bffd994a08f42c1aeabfbd42a1caf8e0\",\"dweb:/ipfs/QmZP1GhkYVsTvRCzMUPuUZGBdLhuj6P1ZAS4CKthknJH8D\"]}},\"version\":1}",
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\".deps/studying-solidity/structs/StructsToTestament.sol\":\"StructsToTestament\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\".deps/studying-solidity/structs/StructsToTestament.sol\":{\"keccak256\":\"0x83c6cdf04a33b0c25f5a730a05d82c60c9602a5e95ce4e5c9153ef5a13e316ea\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4e2713456aad7e37fd0034566bd6b867801b81bf6816a80657f611c4f3f28992\",\"dweb:/ipfs/QmXhPU7uEXejjg7pB48wDppTtjdX1FacmrBZshMVqwvTrC\"]}},\"version\":1}",
 					"storageLayout": {
 						"storage": [],
 						"types": null
@@ -519,11 +519,11 @@
 											"constant": false,
 											"id": 18,
 											"mutability": "mutable",
-											"name": "inheritanceValue",
-											"nameLocation": "328:16:0",
+											"name": "inheritanceTotalValue",
+											"nameLocation": "328:21:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 19,
-											"src": "320:24:0",
+											"src": "320:29:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -547,17 +547,17 @@
 									"nameLocation": "215:9:0",
 									"nodeType": "StructDefinition",
 									"scope": 20,
-									"src": "208:175:0",
+									"src": "208:180:0",
 									"visibility": "public"
 								}
 							],
 							"scope": 21,
-							"src": "57:328:0",
+							"src": "57:333:0",
 							"usedErrors": [],
 							"usedEvents": []
 						}
 					],
-					"src": "32:354:0"
+					"src": "32:359:0"
 				},
 				"id": 0
 			}

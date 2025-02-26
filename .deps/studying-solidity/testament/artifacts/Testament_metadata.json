@@ -185,7 +185,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "inheritanceValue",
+						"name": "inheritanceTotalValue",
 						"type": "uint256"
 					}
 				],
@@ -241,19 +241,19 @@
 	},
 	"sources": {
 		".deps/studying-solidity/structs/StructsToTestament.sol": {
-			"keccak256": "0x838e36cfc371884ed322ce2252758a80db2b67f0e7a5df10e80ef46a1e011186",
+			"keccak256": "0x83c6cdf04a33b0c25f5a730a05d82c60c9602a5e95ce4e5c9153ef5a13e316ea",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c77e4a9e64d3484b84a1da390dc571e8bffd994a08f42c1aeabfbd42a1caf8e0",
-				"dweb:/ipfs/QmZP1GhkYVsTvRCzMUPuUZGBdLhuj6P1ZAS4CKthknJH8D"
+				"bzz-raw://4e2713456aad7e37fd0034566bd6b867801b81bf6816a80657f611c4f3f28992",
+				"dweb:/ipfs/QmXhPU7uEXejjg7pB48wDppTtjdX1FacmrBZshMVqwvTrC"
 			]
 		},
 		".deps/studying-solidity/testament/Testament.sol": {
-			"keccak256": "0xddb6c3c8d631d2e22e5cd11c09b5afcebbda8389461c2f17d15f249248b6c6e6",
+			"keccak256": "0x3d85888ee075488a34828b17d3ecf90838d53d5c5f80cb1603fb01c92ce7643e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ac848ab31d72112f138553870d4cd9c2db23aaa4253cf43a06c738fea66abbf0",
-				"dweb:/ipfs/QmeiXdwA3fX4SJa8CpBfuJdHvYCbFZNeceXdjDc91u4Zrg"
+				"bzz-raw://cc225526ea83a2cf347abb207269798f9012a6db301dd358de79b0c29f45bccd",
+				"dweb:/ipfs/Qma7xZo5nZVEQsbPwZiiZUmu34Kov5iTHovpJ2pgV7mYJa"
 			]
 		}
 	},

@@ -49,7 +49,7 @@ contract Testament is StructsToTestament {
         }
 
         _testament.exist = true;
-        _testament.inheritanceValue = msg.value;
+        _testament.inheritanceTotalValue = msg.value;
         updateProofOfLife();
     }
 
@@ -91,7 +91,7 @@ contract Testament is StructsToTestament {
             _percentages,
             _canWithdrawal,
             _testator.lastProofOfLife,
-            _testator.inheritanceValue
+            _testator.inheritanceTotalValue
         );
     }
 
@@ -148,7 +148,7 @@ contract Testament is StructsToTestament {
 
         require(testament[_ownTestament].exist, "voce nao possui testamento");
         (bool success, ) = msg.sender.call{
-            value: testament[_ownTestament].inheritanceValue
+            value: testament[_ownTestament].inheritanceTotalValue
         }("");
         require(success, "cancelTestament(), Falha ao enviar ETH");
 
@@ -214,7 +214,7 @@ contract Testament is StructsToTestament {
             "voce nao possui testamento criado"
         );
         require(msg.value > 0, "insira um valor");
-        testament[msg.sender].inheritanceValue += msg.value;
+        testament[msg.sender].inheritanceTotalValue += msg.value;
     }
 
     function removeAssetsInTestament(uint256 value) external {
@@ -223,14 +223,14 @@ contract Testament is StructsToTestament {
             "voce nao possui testamento criado"
         );
         require(
-            value <= testament[msg.sender].inheritanceValue,
+            value <= testament[msg.sender].inheritanceTotalValue,
             "voce nao tem isso tudo ai"
         );
 
         (bool success, ) = payable(msg.sender).call{value: value}("");
 
         require(success, "nao tirou");
-        testament[msg.sender].inheritanceValue -= value;
+        testament[msg.sender].inheritanceTotalValue -= value;
     }
 
     // ta zoada essa aqui
@@ -254,22 +254,27 @@ contract Testament is StructsToTestament {
                 inheritorOfTestament.canWithdraw
             ) {
                 require(
-                    testament[testator].inheritanceValue > 0,
+                    testament[testator].inheritanceTotalValue > 0,
                     "nao tem value no testamento"
                 );
 
+                //pega o valor que aquele herdeiro tem disponivel
+                //porcentagem é com duas casas a mais e divide por 10000
+                //exemplo (4000/10000) = 40%
+                uint256 valueToWithdraw = (testament[testator]
+                    .inheritanceTotalValue * inheritorOfTestament.percentage) /
+                    10000;
+
                 (bool success, ) = payable(
                     inheritorOfTestament.inheritorAddress
-                ).call{
-                    value: ((testament[testator].inheritanceValue *
-                        inheritorOfTestament.percentage) / 10000)
-                }("");
+                ).call{value: (valueToWithdraw)}("");
 
                 require(success, "Falha ao enviar ETH");
+
                 inheritorOfTestament.canWithdraw = false;
-                //}
-                // break;
+                break;
             }
         }
+        require(false, "voce nao esta no testamento");
     }
 }

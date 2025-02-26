@@ -12,7 +12,7 @@ contract StructsToTestament {
         Inheritor[] inheritors;
         bool exist;
         uint128 lastProofOfLife;
-        uint256 inheritanceValue;
+        uint256 inheritanceTotalValue;
         //salvar as moedas aqui
     }
 }

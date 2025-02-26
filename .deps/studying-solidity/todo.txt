@@ -1,6 +1,8 @@
-controle para cada herdeiro sacar a sua parte e não poder sacar mais
+controle para cada herdeiro sacar a sua parte e não poder sacar mais - feito
 
 remover e adicionar ETH no testamento - feito
+
+adicionar regras de tempo na prova de vida
 
 lista de moedas ERC-20 no testamento
 
