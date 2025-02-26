@@ -99,6 +99,25 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "testator",
+						"type": "address"
+					}
+				],
+				"name": "inheritorCanWithdrawal",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					},
@@ -192,11 +211,11 @@
 			]
 		},
 		".deps/studying-solidity/testament/Testament.sol": {
-			"keccak256": "0x7e80ac6900a600de1d08b6f8aef281521f8a1b703097afd4a0b9402e0195323d",
+			"keccak256": "0x4300a6dc5df9abf40b60ac6548299b33c1eb9354afad97392b9c7f9e28d5d10a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e91b12e8a1724f36302687b89c6d1bcb7ec0c12dd356015967e1e9e3caf7bb15",
-				"dweb:/ipfs/QmeSTa97MoNQHiVEu1GBzP1gmghbAghDDBTwaxXCDQ22KK"
+				"bzz-raw://6be5f76b9acf2586684d26645b1996b05848071568216e0df8bb44ded305cd6e",
+				"dweb:/ipfs/Qmdu8zHRsX6HkKA1Js8iZHzsQjYWXL8PmpYz1kY3QGq85P"
 			]
 		}
 	},

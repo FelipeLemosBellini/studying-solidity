@@ -1,0 +1,11 @@
+função para o herdeiro perguntar se pode sacar
+
+controle para cada herdeiro sacar a sua parte e não poder sacar mais
+
+lista de moedas ERC-20 no testamento
+
+
+planos
+1. Um herdeiro - 5 ativos
+2. multiplos herdeiros - 20 ativos
+3. Multiplos testamentos e multiplos herdeiros - ilimitado

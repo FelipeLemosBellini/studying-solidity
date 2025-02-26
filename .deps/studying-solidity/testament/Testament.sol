@@ -178,4 +178,15 @@ contract Testament is StructsToTestament {
             }
         }
     }
+
+    function inheritorCanWithdrawal(address testator)
+        public
+        view
+        returns (bool)
+    {
+        uint256 ninetyDays = 30 * 86400; // 30 dias em segundos
+
+        return
+            block.timestamp >= testament[testator].lastProofOfLife + ninetyDays;
+    }
 }
