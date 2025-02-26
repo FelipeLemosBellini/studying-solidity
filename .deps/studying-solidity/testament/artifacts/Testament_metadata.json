@@ -139,7 +139,7 @@
 						"type": "address"
 					}
 				],
-				"name": "inheritorsCanWithdrawal",
+				"name": "inheritorsCanWithdraw",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -249,11 +249,11 @@
 			]
 		},
 		".deps/studying-solidity/testament/Testament.sol": {
-			"keccak256": "0x88991f4436e28cb0c1f8dcdfef116aa87145c67230554ea1a0112578243b45af",
+			"keccak256": "0x2f47623a692cdce457f94a5dcb5f7951299c0acc27a61c7ca5f9ea1c41e82eb6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b0acb24b195e933d062d017cec60f5d88196399daab1f792ae17c1c9f4532526",
-				"dweb:/ipfs/QmbLXydnS8tH8VDtbQRc9wTWEkTuodc9trwoX6NERh3DU1"
+				"bzz-raw://178cb422716112d451dc0b730f482016a35f21e05ac59e06527b6bf6073c2798",
+				"dweb:/ipfs/QmWCWbRygTr4H9DSU8pyAPPBcUsmdH41zj1mgZmUEcTNJ5"
 			]
 		}
 	},

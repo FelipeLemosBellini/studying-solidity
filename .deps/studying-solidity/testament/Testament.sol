@@ -187,11 +187,12 @@ contract Testament is StructsToTestament {
         }
     }
 
-    function inheritorsCanWithdrawal(address testator)
+    function inheritorsCanWithdraw(address testator)
         public
         view
         returns (bool)
     {
+        require(testament[testator].exist, "Testamento nao encontrado");
         uint256 ninetyDays = 1;
         //30 * 86400; // 30 dias em segundos
 
@@ -230,7 +231,7 @@ contract Testament is StructsToTestament {
 
         //verificar se tem ETH pra sacar
         require(
-            inheritorsCanWithdrawal(testator),
+            inheritorsCanWithdraw(testator),
             "A retirada nao pode ser realizada"
         );
 
