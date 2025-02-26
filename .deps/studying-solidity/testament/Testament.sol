@@ -233,7 +233,6 @@ contract Testament is StructsToTestament {
         testament[msg.sender].inheritanceTotalValue -= value;
     }
 
-    // ta zoada essa aqui
     function withdraw(address testator) external {
         address _inheritor = msg.sender;
 

@@ -1,11 +1,20 @@
-controle para cada herdeiro sacar a sua parte e não poder sacar mais - feito
+Feito
+- Cadastrar multiplos herdeiros e porcentagens, depósito de ETH
+- Edição dos herdeiros e porcentagens
+- Busca do testamento e seus dados
+- Busca dos testamentos que estou inserido.
+- Adicionar mais ETH no testamento
+- Remover ETH do testamento
+- Cancelamento do testamento e reembolso do ETH para o testador
+- Prova de vida do testador
+- Checagem da prova de vida, chumbado 30 dias. retorna(bool)
+- Saque dos herdeiros, cada herdeiro saca a sua parte em ETH.
 
-remover e adicionar ETH no testamento - feito
+A fazer
 
 adicionar regras de tempo na prova de vida
 
-lista de moedas ERC-20 no testamento
-
+adicionar lista de moedas ERC-20 no testamento
 
 planos
 1. Um herdeiro - 5 ativos

@@ -249,11 +249,11 @@
 			]
 		},
 		".deps/studying-solidity/testament/Testament.sol": {
-			"keccak256": "0x3d85888ee075488a34828b17d3ecf90838d53d5c5f80cb1603fb01c92ce7643e",
+			"keccak256": "0xb37c8f80ac3378eb750201a56a717a48d310e46da8736e5b77d3a93edbbe6727",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cc225526ea83a2cf347abb207269798f9012a6db301dd358de79b0c29f45bccd",
-				"dweb:/ipfs/Qma7xZo5nZVEQsbPwZiiZUmu34Kov5iTHovpJ2pgV7mYJa"
+				"bzz-raw://7d3c416bc0df4438389fe7738db11d3260aadbe417fde2861837690aed98da7d",
+				"dweb:/ipfs/QmPQLzr2ab8Se6mnYYBUv5STwLo82cy6cBSecuLo3JSETn"
 			]
 		}
 	},
