@@ -11,8 +11,8 @@ contract Testament is StructsToTestament {
     mapping(address => address[]) public inheritorToTestators;
 
     function createInheritance(
-        address[] memory _addresses,
-        uint16[] memory _percentagens
+        address[] calldata _addresses,
+        uint16[] calldata _percentagens
     ) external payable {
         //checagens para continuar o contrato
         require(msg.value != 0, "createInheritance(), valor invalido");
@@ -31,6 +31,8 @@ contract Testament is StructsToTestament {
             "createInheritance(), voce ja tem um testamento criado, edite ele"
         );
 
+        Testament storage _testament = testament[_ownOfTestament];
+
         //guarda cada herdeiro e porcentagem que vem do dApp
         for (uint256 i = 0; i < _addresses.length; i++) {
             Inheritor memory _inheritor = Inheritor(
@@ -43,11 +45,11 @@ contract Testament is StructsToTestament {
             inheritorToTestators[_addresses[i]].push(_ownOfTestament);
 
             //adiciona o herdeiro e % no testamento
-            testament[_ownOfTestament].inheritors.push(_inheritor);
+            _testament.inheritors.push(_inheritor);
         }
 
-        testament[_ownOfTestament].exist = true;
-        testament[_ownOfTestament].inheritanceValue = msg.value;
+        _testament.exist = true;
+        _testament.inheritanceValue = msg.value;
         updateProofOfLife();
     }
 
@@ -95,6 +97,11 @@ contract Testament is StructsToTestament {
 
     function getMyTestators() external view returns (address[] memory) {
         address _inheritor = msg.sender;
+
+        require(
+            inheritorToTestators[_inheritor].length > 0,
+            "Voce nao esta em nenhum testamento"
+        );
 
         //retorna os endereços dos testadores que o herdeiro está no contrato
         return inheritorToTestators[_inheritor];
@@ -192,7 +199,8 @@ contract Testament is StructsToTestament {
         view
         returns (bool)
     {
-        require(testament[testator].exist, "Testamento nao encontrado");
+        if (!testament[testator].exist) return false;
+
         uint256 ninetyDays = 1;
         //30 * 86400; // 30 dias em segundos
 
@@ -202,7 +210,7 @@ contract Testament is StructsToTestament {
 
     function addAssetsInTestament() external payable {
         require(
-            testament[msg.sender].exist == true,
+            testament[msg.sender].exist,
             "voce nao possui testamento criado"
         );
         require(msg.value > 0, "insira um valor");
@@ -211,7 +219,7 @@ contract Testament is StructsToTestament {
 
     function removeAssetsInTestament(uint256 value) external {
         require(
-            testament[msg.sender].exist == true,
+            testament[msg.sender].exist,
             "voce nao possui testamento criado"
         );
         require(
@@ -225,7 +233,7 @@ contract Testament is StructsToTestament {
         testament[msg.sender].inheritanceValue -= value;
     }
 
-     // ta zoada essa aqui
+    // ta zoada essa aqui
     function withdraw(address testator) external {
         address _inheritor = msg.sender;
 
@@ -238,37 +246,30 @@ contract Testament is StructsToTestament {
         require(testament[testator].inheritors.length > 0, "nao tem herdeiros");
 
         for (uint256 i = 0; i < testament[testator].inheritors.length; i++) {
-            Inheritor memory inheritorOfTestament = testament[testator]
+            Inheritor storage inheritorOfTestament = testament[testator]
                 .inheritors[i];
 
-            require(
-                inheritorOfTestament.inheritorAddress == _inheritor,
-                "testamento e quem ta rodando a funcao de saque sao diferentes"
-            );
-            require(inheritorOfTestament.canWithdraw, "nao pode sacar");
-
-            //if (
-                //inheritorOfTestament.inheritorAddress == _inheritor &&
-                ///inheritorOfTestament.canWithdraw
-            //    true
-            //) {
-                
-                //require(inheritanceValue>0, "nao tem value no testamento");
-                //uint256 percentage = inheritorOfTestament.percentage;
+            if (
+                inheritorOfTestament.inheritorAddress == _inheritor &&
+                inheritorOfTestament.canWithdraw
+            ) {
+                require(
+                    testament[testator].inheritanceValue > 0,
+                    "nao tem value no testamento"
+                );
 
                 (bool success, ) = payable(
                     inheritorOfTestament.inheritorAddress
                 ).call{
-                    value: //(
-                        testament[_inheritor]
-                    .inheritanceValue
-                     //*    percentage) / 10000
+                    value: ((testament[testator].inheritanceValue *
+                        inheritorOfTestament.percentage) / 10000)
                 }("");
-            
+
                 require(success, "Falha ao enviar ETH");
                 inheritorOfTestament.canWithdraw = false;
-            //}
-           // break;
+                //}
+                // break;
+            }
         }
     }
 }

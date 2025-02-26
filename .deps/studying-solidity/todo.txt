@@ -1,6 +1,6 @@
 controle para cada herdeiro sacar a sua parte e não poder sacar mais
 
-remover e adicionar ETH no testamento
+remover e adicionar ETH no testamento - feito
 
 lista de moedas ERC-20 no testamento
 
