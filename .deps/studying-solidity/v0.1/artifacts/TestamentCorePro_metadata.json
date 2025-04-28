@@ -104,7 +104,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			".deps/studying-solidity/v0.1/TestamentCore.sol": "TestamentCore"
+			".deps/studying-solidity/v0.1/TestamentCore.sol": "TestamentCorePro"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -135,11 +135,11 @@
 			]
 		},
 		".deps/studying-solidity/v0.1/TestamentCore.sol": {
-			"keccak256": "0x32b1f32bb44855469ac61d2ff1ab682ed9573d80ac13e427442977391f59e0be",
+			"keccak256": "0x6f42bf7a5cfc156db7a0c0ada3d3993b8a66b6effcdf251952039a0a6ad4faf7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9192aaddd93d7825431a2a9a43981767c5f37f9eebcbe2fd3b03d6c3d4aa6d8f",
-				"dweb:/ipfs/QmQLsXUHU5oqydk6qnjwP6oZNTq1zFvjwCG7JhfXCrnDak"
+				"bzz-raw://b469f1567b37073724fc9e7fa9b64b3244ed2b2488ee4db2673e17faf2a5f435",
+				"dweb:/ipfs/QmcNiM9Rd7HojWAuSccTDjQCbqRypZoqKeZNpYgwC97DGh"
 			]
 		},
 		".deps/studying-solidity/v0.1/TestamentStorage.sol": {

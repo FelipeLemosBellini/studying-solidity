@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/v0.1/TestamentCoreProxy.sol": "Testament"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/v0.1/BaseModifiers.sol": {
+			"keccak256": "0x1a47aad06f8e95694d5f82aeb3e0473e3a588df198e1cfda5b588927e10143fc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://92027538e154a41b67183c0b6a9686d30e2c4a71e9a80337c735c35e5a639e73",
+				"dweb:/ipfs/QmXojfzVbUjUftsjiGEihTVEHYXQNHsxUdCYHVJhWLh1xz"
+			]
+		},
+		".deps/studying-solidity/v0.1/ProofOfLife.sol": {
+			"keccak256": "0xb29decd5a523f8e59fa3418cd9c846b67e1bd79c10b5a470156a743504a6ebc2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be9caa471383817ddd0c9711f2992bce9bd39f336bfbcd1e4612692afed7a36b",
+				"dweb:/ipfs/QmTRk3bXFF2wJ4SH8mQTaR28smXqfVPkBmLMmVxnBrkE7S"
+			]
+		},
+		".deps/studying-solidity/v0.1/TestamentCoreProxy.sol": {
+			"keccak256": "0x3686890d9a42684cf299c70515f0b9146286c6421781aa7aa82d9f4ef7e9737b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b6a405b7f87cd186dc4b56530423a590d4ad7e3e026d8ab226d00e6d505bdb28",
+				"dweb:/ipfs/QmRvLBdiea7TBQmiBErTf37ZP2FLtVMHD6RFaRJxug23Kt"
+			]
+		},
+		".deps/studying-solidity/v0.1/TestamentStorage.sol": {
+			"keccak256": "0x30c13cf3ac147183a7b804f979a52cc4aeacb4f565b3c5f8ec37f22dc5500228",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e413d7dc40010fa6d5f03d9fafa66b7520a4a09ea51e384c9a09814cea42a59",
+				"dweb:/ipfs/QmSaK2AZVSGNpgx4TfYLvpuo7YQ2Fua8dmvwzsb9CY5X2h"
+			]
+		}
+	},
+	"version": 1
+}

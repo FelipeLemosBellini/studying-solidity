@@ -7,6 +7,11 @@
 		"abi": [
 			{
 				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
 				"name": "cancelTestament",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -104,7 +109,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			".deps/studying-solidity/v0.1/TestamentCore.sol": "TestamentCore"
+			".deps/studying-solidity/v0.1/TestamentCoreProxy.sol": "TestamentCoreProxy"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -134,12 +139,12 @@
 				"dweb:/ipfs/QmTRk3bXFF2wJ4SH8mQTaR28smXqfVPkBmLMmVxnBrkE7S"
 			]
 		},
-		".deps/studying-solidity/v0.1/TestamentCore.sol": {
-			"keccak256": "0x32b1f32bb44855469ac61d2ff1ab682ed9573d80ac13e427442977391f59e0be",
+		".deps/studying-solidity/v0.1/TestamentCoreProxy.sol": {
+			"keccak256": "0xab76f176bd9f73065ca8e7671d5b252d5a03852ab8bf12e2b1ecfb8679a94804",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9192aaddd93d7825431a2a9a43981767c5f37f9eebcbe2fd3b03d6c3d4aa6d8f",
-				"dweb:/ipfs/QmQLsXUHU5oqydk6qnjwP6oZNTq1zFvjwCG7JhfXCrnDak"
+				"bzz-raw://e67864edfd2238c5af3d14427015f13730a18138f70c12d5375dd16bf44aea0c",
+				"dweb:/ipfs/QmTCofPd76yQiKmju7wQRSE8JCaHv7nrCpN1NYLHng9t9t"
 			]
 		},
 		".deps/studying-solidity/v0.1/TestamentStorage.sol": {

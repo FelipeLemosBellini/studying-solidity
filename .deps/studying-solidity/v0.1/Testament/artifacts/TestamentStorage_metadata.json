@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "inheritorToTestators",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "testaments",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "exist",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint128",
+						"name": "lastProofOfLife",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint256",
+						"name": "inheritanceTotalValue",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/v0.1/Testament/TestamentStorage.sol": "TestamentStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/v0.1/Testament/TestamentStorage.sol": {
+			"keccak256": "0x80756c52f9bdaf7fc413116c8e2da554d9ab563a923c69a6e7ae85299425ea5a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1bfe7b30225aca68623c9ff004b439e80be369d73cc2c33ba92743d3a0986028",
+				"dweb:/ipfs/QmYDUP5Trbksk1KH1JKSudd3uPfD24sGdGgumiM6UpRkUN"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,67 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {
+				"@_24": {
+					"entryPoint": null,
+					"id": 24,
+					"parameterSlots": 0,
+					"returnSlots": 0
+				}
+			},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6080604052348015600e575f80fd5b5060015f81905550603e8060215f395ff3fe60806040525f80fdfea264697066735822122002005b5e9035f4fad2ec675d77571abc1a1dcada59cd6bdb8bfce9fb9267598264736f6c634300081a0033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 DUP1 REVERT JUMPDEST POP PUSH1 0x1 PUSH0 DUP2 SWAP1 SSTORE POP PUSH1 0x3E DUP1 PUSH1 0x21 PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MUL STOP JUMPDEST MCOPY SWAP1 CALLDATALOAD DELEGATECALL STATICCALL 0xD2 0xEC PUSH8 0x5D77571ABC1A1DCA 0xDA MSIZE 0xCD PUSH12 0xDB8BFCE9FB9267598264736F PUSH13 0x634300081A0033000000000000 ",
+			"sourceMap": "122:35:0:-:0;;;;;;;;;;;;;1716:1:1;1821:7;:22;;;;122:35:0;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "60806040525f80fdfea264697066735822122002005b5e9035f4fad2ec675d77571abc1a1dcada59cd6bdb8bfce9fb9267598264736f6c634300081a0033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MUL STOP JUMPDEST MCOPY SWAP1 CALLDATALOAD DELEGATECALL STATICCALL 0xD2 0xEC PUSH8 0x5D77571ABC1A1DCA 0xDA MSIZE 0xCD PUSH12 0xDB8BFCE9FB9267598264736F PUSH13 0x634300081A0033000000000000 ",
+			"sourceMap": "122:35:0:-:0;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "12400",
+				"executionCost": "22177",
+				"totalCost": "34577"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": []
+}

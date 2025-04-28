@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-abstract contract TestamentStorage {
+contract TestamentStorage {
     struct Inheritor {
         address inheritorAddress;
         uint16 percentage;
