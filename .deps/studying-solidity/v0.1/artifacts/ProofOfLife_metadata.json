@@ -1,0 +1,107 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "inheritorToTestators",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "testaments",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "exist",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint128",
+						"name": "lastProofOfLife",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint256",
+						"name": "inheritanceTotalValue",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/v0.1/ProofOfLife.sol": "ProofOfLife"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/v0.1/ProofOfLife.sol": {
+			"keccak256": "0xb29decd5a523f8e59fa3418cd9c846b67e1bd79c10b5a470156a743504a6ebc2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be9caa471383817ddd0c9711f2992bce9bd39f336bfbcd1e4612692afed7a36b",
+				"dweb:/ipfs/QmTRk3bXFF2wJ4SH8mQTaR28smXqfVPkBmLMmVxnBrkE7S"
+			]
+		},
+		".deps/studying-solidity/v0.1/TestamentStorage.sol": {
+			"keccak256": "0x30c13cf3ac147183a7b804f979a52cc4aeacb4f565b3c5f8ec37f22dc5500228",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e413d7dc40010fa6d5f03d9fafa66b7520a4a09ea51e384c9a09814cea42a59",
+				"dweb:/ipfs/QmSaK2AZVSGNpgx4TfYLvpuo7YQ2Fua8dmvwzsb9CY5X2h"
+			]
+		}
+	},
+	"version": 1
+}

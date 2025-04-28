@@ -1,0 +1,155 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "cancelTestament",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint16[]",
+						"name": "_percentagens",
+						"type": "uint16[]"
+					}
+				],
+				"name": "createInheritance",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "editInheritorsInMyTestament",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "inheritorToTestators",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "testaments",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "exist",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint128",
+						"name": "lastProofOfLife",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint256",
+						"name": "inheritanceTotalValue",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/v0.1/TestamentCore.sol": "TestamentCore"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/v0.1/BaseModifiers.sol": {
+			"keccak256": "0x1a47aad06f8e95694d5f82aeb3e0473e3a588df198e1cfda5b588927e10143fc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://92027538e154a41b67183c0b6a9686d30e2c4a71e9a80337c735c35e5a639e73",
+				"dweb:/ipfs/QmXojfzVbUjUftsjiGEihTVEHYXQNHsxUdCYHVJhWLh1xz"
+			]
+		},
+		".deps/studying-solidity/v0.1/ProofOfLife.sol": {
+			"keccak256": "0xb29decd5a523f8e59fa3418cd9c846b67e1bd79c10b5a470156a743504a6ebc2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be9caa471383817ddd0c9711f2992bce9bd39f336bfbcd1e4612692afed7a36b",
+				"dweb:/ipfs/QmTRk3bXFF2wJ4SH8mQTaR28smXqfVPkBmLMmVxnBrkE7S"
+			]
+		},
+		".deps/studying-solidity/v0.1/TestamentCore.sol": {
+			"keccak256": "0x8b23b73a4b6e877ba19d53e952443f2b62733ce6b674d949f2b5a07e3076fd6c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://496a29981a483a93679dde41ed33b86df82733ec4ed6b5f723492e84239ef078",
+				"dweb:/ipfs/QmXoa4K27QXwGVTBGsJi6yiHvfxrEZFc43LSoym8wRjunc"
+			]
+		},
+		".deps/studying-solidity/v0.1/TestamentStorage.sol": {
+			"keccak256": "0x30c13cf3ac147183a7b804f979a52cc4aeacb4f565b3c5f8ec37f22dc5500228",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e413d7dc40010fa6d5f03d9fafa66b7520a4a09ea51e384c9a09814cea42a59",
+				"dweb:/ipfs/QmSaK2AZVSGNpgx4TfYLvpuo7YQ2Fua8dmvwzsb9CY5X2h"
+			]
+		}
+	},
+	"version": 1
+}

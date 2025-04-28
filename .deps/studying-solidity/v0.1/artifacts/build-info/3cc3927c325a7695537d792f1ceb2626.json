@@ -1,0 +1,690 @@
+{
+	"id": "3cc3927c325a7695537d792f1ceb2626",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			".deps/studying-solidity/v0.1/TestamentStorage.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\nabstract contract TestamentStorage {\r\n    struct Inheritor {\r\n        address inheritorAddress;\r\n        uint16 percentage;\r\n        bool canWithdraw;\r\n    }\r\n\r\n    struct Testament {\r\n        Inheritor[] inheritors;\r\n        bool exist;\r\n        uint128 lastProofOfLife;\r\n        uint256 inheritanceTotalValue;\r\n        //salvar as moedas aqui\r\n    }\r\n\r\n    //dono do testamento: testamento\r\n    mapping(address => Testament) public testaments;\r\n\r\n    // Cada herdeiro pode estar vinculado a múltiplos testamentos\r\n    mapping(address => address[]) public inheritorToTestators;\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			".deps/studying-solidity/v0.1/TestamentStorage.sol": {
+				"TestamentStorage": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "",
+									"type": "uint256"
+								}
+							],
+							"name": "inheritorToTestators",
+							"outputs": [
+								{
+									"internalType": "address",
+									"name": "",
+									"type": "address"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "",
+									"type": "address"
+								}
+							],
+							"name": "testaments",
+							"outputs": [
+								{
+									"internalType": "bool",
+									"name": "exist",
+									"type": "bool"
+								},
+								{
+									"internalType": "uint128",
+									"name": "lastProofOfLife",
+									"type": "uint128"
+								},
+								{
+									"internalType": "uint256",
+									"name": "inheritanceTotalValue",
+									"type": "uint256"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"inheritorToTestators(address,uint256)": "5b084db9",
+							"testaments(address)": "1acb49b4"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"inheritorToTestators\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"testaments\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"exist\",\"type\":\"bool\"},{\"internalType\":\"uint128\",\"name\":\"lastProofOfLife\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"inheritanceTotalValue\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\".deps/studying-solidity/v0.1/TestamentStorage.sol\":\"TestamentStorage\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\".deps/studying-solidity/v0.1/TestamentStorage.sol\":{\"keccak256\":\"0x30c13cf3ac147183a7b804f979a52cc4aeacb4f565b3c5f8ec37f22dc5500228\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e413d7dc40010fa6d5f03d9fafa66b7520a4a09ea51e384c9a09814cea42a59\",\"dweb:/ipfs/QmSaK2AZVSGNpgx4TfYLvpuo7YQ2Fua8dmvwzsb9CY5X2h\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 24,
+								"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+								"label": "testaments",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_mapping(t_address,t_struct(Testament)19_storage)"
+							},
+							{
+								"astId": 29,
+								"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+								"label": "inheritorToTestators",
+								"offset": 0,
+								"slot": "1",
+								"type": "t_mapping(t_address,t_array(t_address)dyn_storage)"
+							}
+						],
+						"types": {
+							"t_address": {
+								"encoding": "inplace",
+								"label": "address",
+								"numberOfBytes": "20"
+							},
+							"t_array(t_address)dyn_storage": {
+								"base": "t_address",
+								"encoding": "dynamic_array",
+								"label": "address[]",
+								"numberOfBytes": "32"
+							},
+							"t_array(t_struct(Inheritor)8_storage)dyn_storage": {
+								"base": "t_struct(Inheritor)8_storage",
+								"encoding": "dynamic_array",
+								"label": "struct TestamentStorage.Inheritor[]",
+								"numberOfBytes": "32"
+							},
+							"t_bool": {
+								"encoding": "inplace",
+								"label": "bool",
+								"numberOfBytes": "1"
+							},
+							"t_mapping(t_address,t_array(t_address)dyn_storage)": {
+								"encoding": "mapping",
+								"key": "t_address",
+								"label": "mapping(address => address[])",
+								"numberOfBytes": "32",
+								"value": "t_array(t_address)dyn_storage"
+							},
+							"t_mapping(t_address,t_struct(Testament)19_storage)": {
+								"encoding": "mapping",
+								"key": "t_address",
+								"label": "mapping(address => struct TestamentStorage.Testament)",
+								"numberOfBytes": "32",
+								"value": "t_struct(Testament)19_storage"
+							},
+							"t_struct(Inheritor)8_storage": {
+								"encoding": "inplace",
+								"label": "struct TestamentStorage.Inheritor",
+								"members": [
+									{
+										"astId": 3,
+										"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+										"label": "inheritorAddress",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_address"
+									},
+									{
+										"astId": 5,
+										"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+										"label": "percentage",
+										"offset": 20,
+										"slot": "0",
+										"type": "t_uint16"
+									},
+									{
+										"astId": 7,
+										"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+										"label": "canWithdraw",
+										"offset": 22,
+										"slot": "0",
+										"type": "t_bool"
+									}
+								],
+								"numberOfBytes": "32"
+							},
+							"t_struct(Testament)19_storage": {
+								"encoding": "inplace",
+								"label": "struct TestamentStorage.Testament",
+								"members": [
+									{
+										"astId": 12,
+										"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+										"label": "inheritors",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_array(t_struct(Inheritor)8_storage)dyn_storage"
+									},
+									{
+										"astId": 14,
+										"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+										"label": "exist",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_bool"
+									},
+									{
+										"astId": 16,
+										"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+										"label": "lastProofOfLife",
+										"offset": 1,
+										"slot": "1",
+										"type": "t_uint128"
+									},
+									{
+										"astId": 18,
+										"contract": ".deps/studying-solidity/v0.1/TestamentStorage.sol:TestamentStorage",
+										"label": "inheritanceTotalValue",
+										"offset": 0,
+										"slot": "2",
+										"type": "t_uint256"
+									}
+								],
+								"numberOfBytes": "96"
+							},
+							"t_uint128": {
+								"encoding": "inplace",
+								"label": "uint128",
+								"numberOfBytes": "16"
+							},
+							"t_uint16": {
+								"encoding": "inplace",
+								"label": "uint16",
+								"numberOfBytes": "2"
+							},
+							"t_uint256": {
+								"encoding": "inplace",
+								"label": "uint256",
+								"numberOfBytes": "32"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			".deps/studying-solidity/v0.1/TestamentStorage.sol": {
+				"ast": {
+					"absolutePath": ".deps/studying-solidity/v0.1/TestamentStorage.sol",
+					"exportedSymbols": {
+						"TestamentStorage": [
+							30
+						]
+					},
+					"id": 31,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						},
+						{
+							"abstract": true,
+							"baseContracts": [],
+							"canonicalName": "TestamentStorage",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 30,
+							"linearizedBaseContracts": [
+								30
+							],
+							"name": "TestamentStorage",
+							"nameLocation": "78:16:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "TestamentStorage.Inheritor",
+									"id": 8,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "inheritorAddress",
+											"nameLocation": "138:16:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 8,
+											"src": "130:24:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "address",
+												"nodeType": "ElementaryTypeName",
+												"src": "130:7:0",
+												"stateMutability": "nonpayable",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "percentage",
+											"nameLocation": "172:10:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 8,
+											"src": "165:17:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint16",
+												"typeString": "uint16"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "uint16",
+												"nodeType": "ElementaryTypeName",
+												"src": "165:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint16",
+													"typeString": "uint16"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 7,
+											"mutability": "mutable",
+											"name": "canWithdraw",
+											"nameLocation": "198:11:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 8,
+											"src": "193:16:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bool",
+												"typeString": "bool"
+											},
+											"typeName": {
+												"id": 6,
+												"name": "bool",
+												"nodeType": "ElementaryTypeName",
+												"src": "193:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "Inheritor",
+									"nameLocation": "109:9:0",
+									"nodeType": "StructDefinition",
+									"scope": 30,
+									"src": "102:115:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "TestamentStorage.Testament",
+									"id": 19,
+									"members": [
+										{
+											"constant": false,
+											"id": 12,
+											"mutability": "mutable",
+											"name": "inheritors",
+											"nameLocation": "265:10:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 19,
+											"src": "253:22:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_array$_t_struct$_Inheritor_$8_storage_$dyn_storage_ptr",
+												"typeString": "struct TestamentStorage.Inheritor[]"
+											},
+											"typeName": {
+												"baseType": {
+													"id": 10,
+													"nodeType": "UserDefinedTypeName",
+													"pathNode": {
+														"id": 9,
+														"name": "Inheritor",
+														"nameLocations": [
+															"253:9:0"
+														],
+														"nodeType": "IdentifierPath",
+														"referencedDeclaration": 8,
+														"src": "253:9:0"
+													},
+													"referencedDeclaration": 8,
+													"src": "253:9:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_struct$_Inheritor_$8_storage_ptr",
+														"typeString": "struct TestamentStorage.Inheritor"
+													}
+												},
+												"id": 11,
+												"nodeType": "ArrayTypeName",
+												"src": "253:11:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_array$_t_struct$_Inheritor_$8_storage_$dyn_storage_ptr",
+													"typeString": "struct TestamentStorage.Inheritor[]"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 14,
+											"mutability": "mutable",
+											"name": "exist",
+											"nameLocation": "291:5:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 19,
+											"src": "286:10:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bool",
+												"typeString": "bool"
+											},
+											"typeName": {
+												"id": 13,
+												"name": "bool",
+												"nodeType": "ElementaryTypeName",
+												"src": "286:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 16,
+											"mutability": "mutable",
+											"name": "lastProofOfLife",
+											"nameLocation": "315:15:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 19,
+											"src": "307:23:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint128",
+												"typeString": "uint128"
+											},
+											"typeName": {
+												"id": 15,
+												"name": "uint128",
+												"nodeType": "ElementaryTypeName",
+												"src": "307:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint128",
+													"typeString": "uint128"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 18,
+											"mutability": "mutable",
+											"name": "inheritanceTotalValue",
+											"nameLocation": "349:21:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 19,
+											"src": "341:29:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 17,
+												"name": "uint256",
+												"nodeType": "ElementaryTypeName",
+												"src": "341:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "Testament",
+									"nameLocation": "232:9:0",
+									"nodeType": "StructDefinition",
+									"scope": 30,
+									"src": "225:186:0",
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"functionSelector": "1acb49b4",
+									"id": 24,
+									"mutability": "mutable",
+									"name": "testaments",
+									"nameLocation": "494:10:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 30,
+									"src": "457:47:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_mapping$_t_address_$_t_struct$_Testament_$19_storage_$",
+										"typeString": "mapping(address => struct TestamentStorage.Testament)"
+									},
+									"typeName": {
+										"id": 23,
+										"keyName": "",
+										"keyNameLocation": "-1:-1:-1",
+										"keyType": {
+											"id": 20,
+											"name": "address",
+											"nodeType": "ElementaryTypeName",
+											"src": "465:7:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											}
+										},
+										"nodeType": "Mapping",
+										"src": "457:29:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_mapping$_t_address_$_t_struct$_Testament_$19_storage_$",
+											"typeString": "mapping(address => struct TestamentStorage.Testament)"
+										},
+										"valueName": "",
+										"valueNameLocation": "-1:-1:-1",
+										"valueType": {
+											"id": 22,
+											"nodeType": "UserDefinedTypeName",
+											"pathNode": {
+												"id": 21,
+												"name": "Testament",
+												"nameLocations": [
+													"476:9:0"
+												],
+												"nodeType": "IdentifierPath",
+												"referencedDeclaration": 19,
+												"src": "476:9:0"
+											},
+											"referencedDeclaration": 19,
+											"src": "476:9:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_struct$_Testament_$19_storage_ptr",
+												"typeString": "struct TestamentStorage.Testament"
+											}
+										}
+									},
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"functionSelector": "5b084db9",
+									"id": 29,
+									"mutability": "mutable",
+									"name": "inheritorToTestators",
+									"nameLocation": "618:20:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 30,
+									"src": "581:57:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_mapping$_t_address_$_t_array$_t_address_$dyn_storage_$",
+										"typeString": "mapping(address => address[])"
+									},
+									"typeName": {
+										"id": 28,
+										"keyName": "",
+										"keyNameLocation": "-1:-1:-1",
+										"keyType": {
+											"id": 25,
+											"name": "address",
+											"nodeType": "ElementaryTypeName",
+											"src": "589:7:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											}
+										},
+										"nodeType": "Mapping",
+										"src": "581:29:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_mapping$_t_address_$_t_array$_t_address_$dyn_storage_$",
+											"typeString": "mapping(address => address[])"
+										},
+										"valueName": "",
+										"valueNameLocation": "-1:-1:-1",
+										"valueType": {
+											"baseType": {
+												"id": 26,
+												"name": "address",
+												"nodeType": "ElementaryTypeName",
+												"src": "600:7:0",
+												"stateMutability": "nonpayable",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												}
+											},
+											"id": 27,
+											"nodeType": "ArrayTypeName",
+											"src": "600:9:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+												"typeString": "address[]"
+											}
+										}
+									},
+									"visibility": "public"
+								}
+							],
+							"scope": 31,
+							"src": "60:582:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "33:609:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
