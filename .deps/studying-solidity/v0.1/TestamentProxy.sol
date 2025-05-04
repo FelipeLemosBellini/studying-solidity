@@ -1,14 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract Proxy {
+import "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol";
+
+contract TestamentProxy is ERC1967Proxy {
     address public implementation;  // endereço da lógica (TestamentCore)
     address public admin;           // dono que pode mudar a implementação
 
-    constructor(address _implementation) {
-        implementation = _implementation;
-        admin = msg.sender;
-    }
+    constructor(address _logic, bytes memory _data)
+        ERC1967Proxy(_logic, _data)
+    {}
 
     function updateImplementation(address _newImplementation) external {
         require(msg.sender == admin, "Somente admin pode mudar");
@@ -29,7 +30,7 @@ contract Proxy {
             // Copy retorno
             returndatacopy(0, 0, returndatasize())
 
-            switch result
+            //switch result
             case 0 { revert(0, returndatasize()) }
             default { return(0, returndatasize()) }
         }

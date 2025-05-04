@@ -1,21 +1,10 @@
 {
 	"compiler": {
-		"version": "0.8.29+commit.ab55807c"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "initialOwner",
-						"type": "address"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
 			{
 				"inputs": [
 					{
@@ -59,19 +48,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "core",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -94,19 +70,6 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_core",
-						"type": "address"
-					}
-				],
-				"name": "setCore",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
 						"name": "newOwner",
 						"type": "address"
 					}
@@ -118,6 +81,7 @@
 			}
 		],
 		"devdoc": {
+			"details": "Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions. The initial owner is set to the address provided by the deployer. This can later be changed with {transferOwnership}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner.",
 			"errors": {
 				"OwnableInvalidOwner(address)": [
 					{
@@ -132,6 +96,9 @@
 			},
 			"kind": "dev",
 			"methods": {
+				"constructor": {
+					"details": "Initializes the contract setting the address provided by the deployer as the initial owner."
+				},
 				"owner()": {
 					"details": "Returns the address of the current owner."
 				},
@@ -152,7 +119,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			".deps/studying-solidity/v0.1/Testament/TestamentStorage.sol": "TestamentStorage"
+			".deps/npm/@openzeppelin/contracts/access/Ownable.sol": "Ownable"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -166,15 +133,7 @@
 		"remappings": []
 	},
 	"sources": {
-		".deps/studying-solidity/v0.1/Testament/TestamentStorage.sol": {
-			"keccak256": "0x6edbf7b817058a7b2092fc775b76b1c6527b503e5354e2151661d9b98c8d5dbe",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://22f8a7c51e37533cbdc7ea7213ecb771033a37038343fa5ca7bedfd2a86420d1",
-				"dweb:/ipfs/QmcW7N2ADad8VWXaZAbscDHgZisncXs13cCahV6fvk2Kaj"
-			]
-		},
-		"@openzeppelin/contracts/access/Ownable.sol": {
+		".deps/npm/@openzeppelin/contracts/access/Ownable.sol": {
 			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
 			"license": "MIT",
 			"urls": [
@@ -182,7 +141,7 @@
 				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
 			]
 		},
-		"@openzeppelin/contracts/utils/Context.sol": {
+		".deps/npm/@openzeppelin/contracts/utils/Context.sol": {
 			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
 			"license": "MIT",
 			"urls": [

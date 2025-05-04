@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.29+commit.ab55807c"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -58,8 +58,113 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ownerTestament",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint16[]",
+						"name": "_percentagens",
+						"type": "uint16[]"
+					}
+				],
+				"name": "createInheritance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "testator",
+						"type": "address"
+					}
+				],
+				"name": "getIfTestamentExist",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "testator",
+						"type": "address"
+					}
+				],
+				"name": "getTestamentOf",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "inheritorAddress",
+										"type": "address"
+									},
+									{
+										"internalType": "uint16",
+										"name": "percentage",
+										"type": "uint16"
+									},
+									{
+										"internalType": "bool",
+										"name": "canWithdraw",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct Inheritor[]",
+								"name": "inheritors",
+								"type": "tuple[]"
+							},
+							{
+								"internalType": "bool",
+								"name": "exist",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint128",
+								"name": "lastProofOfLife",
+								"type": "uint128"
+							},
+							{
+								"internalType": "uint256",
+								"name": "inheritanceTotalValue",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Testament",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "core",
+				"name": "owner",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -72,7 +177,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "owner",
+				"name": "proofOfLife",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -94,11 +199,29 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_core",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint128",
+						"name": "timestamp",
+						"type": "uint128"
+					}
+				],
+				"name": "setProofOfLife",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_proofOfLife",
 						"type": "address"
 					}
 				],
-				"name": "setCore",
+				"name": "setProofOfLife",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -152,7 +275,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			".deps/studying-solidity/v0.1/Testament/TestamentStorage.sol": "TestamentStorage"
+			".deps/studying-solidity/v0.1/Testament/TestamentData.sol": "TestamentData"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -166,12 +289,12 @@
 		"remappings": []
 	},
 	"sources": {
-		".deps/studying-solidity/v0.1/Testament/TestamentStorage.sol": {
-			"keccak256": "0x6edbf7b817058a7b2092fc775b76b1c6527b503e5354e2151661d9b98c8d5dbe",
+		".deps/studying-solidity/v0.1/Testament/TestamentData.sol": {
+			"keccak256": "0x6d25cbfcf1c5810f0c7423fe08c719343da18d76207c277c6d11606bc0217871",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://22f8a7c51e37533cbdc7ea7213ecb771033a37038343fa5ca7bedfd2a86420d1",
-				"dweb:/ipfs/QmcW7N2ADad8VWXaZAbscDHgZisncXs13cCahV6fvk2Kaj"
+				"bzz-raw://437e8dce92691d320f42cc52380abccb04b38844b0924895cbf9196522d807e9",
+				"dweb:/ipfs/QmTUyvHDqVUnpmUH5YtuaAYp8FqB5JGASZXCTdDZQHoswt"
 			]
 		},
 		"@openzeppelin/contracts/access/Ownable.sol": {

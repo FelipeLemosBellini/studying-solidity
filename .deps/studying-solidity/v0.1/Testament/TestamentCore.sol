@@ -8,9 +8,13 @@ import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 
-import "./TestamentStorage.sol";
-import "./ProofOfLife.sol";
-import "./BaseModifiers.sol";
+interface IProofOfLife {
+    function updateProofOfLife(address testament) external;
+}
+
+interface ITestamentData {
+    function getTestamentExist(address testator) external view returns (bool);
+}
 
 contract TestamentCore is
     Initializable,
@@ -18,19 +22,24 @@ contract TestamentCore is
     OwnableUpgradeable,
     PausableUpgradeable,
     ReentrancyGuardUpgradeable,
-    AccessControlUpgradeable,
-    TestamentStorage,
-    ProofOfLife
+    AccessControlUpgradeable
 {
+    address public contractInheritanceManagement;
+    address public contractProofOfLife;
+
     function initialize() public initializer {
-        __Ownable_init(msg.sender);
+        __Ownable_init(msg.sender); //aqui eu defino o owner do contrato
         __UUPSUpgradeable_init();
         __Pausable_init();
         __ReentrancyGuard_init();
         __AccessControl_init();
     }
 
-    function _authorizeUpgrade(address) internal override onlyOwner {}
+    function _authorizeUpgrade(address newAddress)
+        internal
+        override
+        onlyOwner
+    {}
 
     function pause() external onlyOwner {
         _pause();
@@ -40,6 +49,38 @@ contract TestamentCore is
         _unpause();
     }
 
+    //////////Modifiers//////////
+    modifier onlyManager() {
+        require(
+            msg.sender == contractInheritanceManagement,
+            "Only Manager can be called by Core"
+        );
+        _;
+    }
+
+    modifier onlyProofOfLife() {
+        require(
+            msg.sender == contractProofOfLife,
+            "Only ProofOfLife can be called by Core"
+        );
+        _;
+    }
+
+    //////////Settings contracts//////////
+    function setNewContractInheritanceManagement(
+        address newContractInheritanceManagement
+    ) external onlyOwner {
+        contractInheritanceManagement = newContractInheritanceManagement;
+    }
+
+    function setNewContractProofOfLife(address newContractProofOfLife)
+        external
+        onlyOwner
+    {
+        contractProofOfLife = newContractProofOfLife;
+    }
+
+    ////////// Inheritance Management //////////
     function createInheritance(
         address[] calldata _addresses,
         uint16[] calldata _percentagens
@@ -54,40 +95,18 @@ contract TestamentCore is
             _addresses.length == _percentagens.length,
             "createInheritance(), quantidade de enderecos e porcentagens diferentes"
         );
-        address _ownOfTestament = msg.sender;
+        address testator = msg.sender;
 
-        require(
-            !testaments[_ownOfTestament].exist,
-            "createInheritance(), voce ja tem um testamento criado, edite ele"
-        );
-
-        Testament storage _testament = testaments[_ownOfTestament];
-
-        //guarda cada herdeiro e porcentagem que vem do dApp
-        for (uint256 i = 0; i < _addresses.length; i++) {
-            Inheritor memory _inheritor = Inheritor(
-                _addresses[i],
-                _percentagens[i],
-                true
-            );
-
-            //adiciona o testador na lista de heranças do herdeiro
-            inheritorToTestators[_addresses[i]].push(_ownOfTestament);
-
-            //adiciona o herdeiro e % no testamento
-            _testament.inheritors.push(_inheritor);
-        }
-
-        _testament.exist = true;
-        _testament.inheritanceTotalValue = msg.value;
-        updateProofOfLife();
+        bool _exist = !ITestamentData(contractInheritanceManagement)
+            .getTestamentExist(testator);
+        require(_exist, "Testamento ja existe. Use a funcao de edicao.");
     }
 
-    function editInheritorsInMyTestament() external {
-        // Editar herdeiros
-    }
-
-    function cancelTestament() external {
-        // Cancelar testamento
+    function updateProofOfLife(address testament) external {
+        require(testament != address(0), "Invalid address");
+        bool _exist = !ITestamentData(contractInheritanceManagement)
+            .getTestamentExist(testament);
+        require(_exist, "Testamento ja existe. Use a funcao de edicao.");
+        IProofOfLife(contractProofOfLife).updateProofOfLife(testament);
     }
 }

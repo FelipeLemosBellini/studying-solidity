@@ -9,16 +9,57 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "initialOwner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
 						"type": "address"
 					},
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
 					}
 				],
-				"name": "inheritorToTestators",
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "contractCore",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -30,38 +71,129 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "contractData",
+				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "testaments",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "bool",
-						"name": "exist",
-						"type": "bool"
-					},
-					{
-						"internalType": "uint128",
-						"name": "lastProofOfLife",
-						"type": "uint128"
-					},
-					{
-						"internalType": "uint256",
-						"name": "inheritanceTotalValue",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "core",
+						"type": "address"
+					}
+				],
+				"name": "setCore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "data",
+						"type": "address"
+					}
+				],
+				"name": "setData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "setNewOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "testament",
+						"type": "address"
+					}
+				],
+				"name": "updateProofOfLife",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -87,19 +219,35 @@
 	},
 	"sources": {
 		".deps/studying-solidity/v0.1/Testament/ProofOfLife.sol": {
-			"keccak256": "0x631bd2fe607116131a640a0fbb8bffec13bc255f4e56015af523c0dd90db85c5",
+			"keccak256": "0x03c43e0b156ea725f4bde032c404b3e0d02cfc84002a60db4833f25ad2e06e4a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b0b7db5133073025566ba207cf9139a5603e133ce990ab1ffb86d37266b4f869",
-				"dweb:/ipfs/QmZuRiXV1fYsFW4Vev7sgPHqwVp5ciwTfH9QMMtyKuU7di"
+				"bzz-raw://f14e3951bdebfec896ef9cbfa574b1c92893ce47ad79a16515d754b2fb65569b",
+				"dweb:/ipfs/QmQCc2cj2689GXFRFMryrfk4eHHU7ptLibnhqJF1UpKNAS"
 			]
 		},
-		".deps/studying-solidity/v0.1/Testament/TestamentStorage.sol": {
-			"keccak256": "0x80756c52f9bdaf7fc413116c8e2da554d9ab563a923c69a6e7ae85299425ea5a",
+		".deps/studying-solidity/v0.1/Testament/TestamentData.sol": {
+			"keccak256": "0x6d25cbfcf1c5810f0c7423fe08c719343da18d76207c277c6d11606bc0217871",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1bfe7b30225aca68623c9ff004b439e80be369d73cc2c33ba92743d3a0986028",
-				"dweb:/ipfs/QmYDUP5Trbksk1KH1JKSudd3uPfD24sGdGgumiM6UpRkUN"
+				"bzz-raw://437e8dce92691d320f42cc52380abccb04b38844b0924895cbf9196522d807e9",
+				"dweb:/ipfs/QmTUyvHDqVUnpmUH5YtuaAYp8FqB5JGASZXCTdDZQHoswt"
+			]
+		},
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6",
+				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
+				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		}
 	},

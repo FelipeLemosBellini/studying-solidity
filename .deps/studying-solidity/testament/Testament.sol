@@ -229,7 +229,7 @@ contract Testament is StructsToTestament {
 
         //atualiza o saldo primeiro e depois saca para evitar reentrancy attack
         testament[msg.sender].inheritanceTotalValue -= value;
-        
+
         (bool success, ) = payable(msg.sender).call{value: value}("");
 
         require(success, "nao tirou");

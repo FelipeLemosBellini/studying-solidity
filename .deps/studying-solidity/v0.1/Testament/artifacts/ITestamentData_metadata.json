@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ownerTestament",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint16[]",
+						"name": "_percentagens",
+						"type": "uint16[]"
+					}
+				],
+				"name": "createInheritance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/studying-solidity/v0.1/Testament/InheritanceManager.sol": "ITestamentData"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/studying-solidity/v0.1/Testament/InheritanceManager.sol": {
+			"keccak256": "0xb86317f350cd95838c5ee58d1707aee7645fd903eb7c9b2acf32fb0ea620aa96",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ca4c2d518a906369146e8571d7cc280284854399efc93f97029a905aff5ca8fa",
+				"dweb:/ipfs/QmdGyw4Lfn9GJvBC7iAEwT8VqsRADswgWssaNoHvtSNSrD"
+			]
+		},
+		".deps/studying-solidity/v0.1/Testament/TestamentData.sol": {
+			"keccak256": "0x6d25cbfcf1c5810f0c7423fe08c719343da18d76207c277c6d11606bc0217871",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://437e8dce92691d320f42cc52380abccb04b38844b0924895cbf9196522d807e9",
+				"dweb:/ipfs/QmTUyvHDqVUnpmUH5YtuaAYp8FqB5JGASZXCTdDZQHoswt"
+			]
+		},
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6",
+				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
+				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
+			]
+		}
+	},
+	"version": 1
+}
